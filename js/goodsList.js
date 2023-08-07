@@ -43,9 +43,8 @@ function appendContent(content) {
     el.appendChild(content);
 };
 
-
 function init() {
-    fetch('./../data/goods.json')
+    fetch('./data/goods.json')
         .then((response) => response.json())
         .then((goodsDatas) => {
 
@@ -71,10 +70,9 @@ function init() {
                     if (card.dataset.name === e.target.dataset.name || e.target.dataset.name === 'all products') {
                         card.classList.remove('hide');
                     }
-
                 });
-
             };
+            
             // add click event listener
             filterButtons.forEach(button => button.addEventListener('click', filterCards));
 
