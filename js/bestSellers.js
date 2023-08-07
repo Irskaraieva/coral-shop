@@ -70,18 +70,18 @@ function createContentTemplate(godsData) {
     </div>
    `;
     return createFragmentTemplate(product);
-}
+};
 
 function createFragmentTemplate(str) {
     const template = document.createElement('template');
     template.innerHTML = str;
     return template.content;
-}
+};
 
 function appendContentToBestSellers(content) {
     const el = document.getElementById('bestSellers');
     el.appendChild(content);
-}
+};
 
 function initBestSellers() {
     fetch('./data/goods.json')
@@ -114,7 +114,7 @@ function initBestSellers() {
                     }
                 });
 
-            }
+            };
             // add click event listener
             filterButtons.forEach(button => button.addEventListener('click', filterCards));
 
@@ -122,6 +122,6 @@ function initBestSellers() {
         .catch((error) => {
             console.error('Error:', error);
         });
-}
+};
 
 initBestSellers();

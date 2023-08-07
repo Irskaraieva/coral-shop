@@ -30,18 +30,18 @@ function createContent(godsData) {
         </figure>
    `;
     return createFragmentTemplate(prod);
-}
+};
 
 function createFragmentTemplate(str) {
     const template = document.createElement('template');
     template.innerHTML = str;
     return template.content;
-}
+};
 
 function appendContent(content) {
     const el = document.getElementById('projects');
     el.appendChild(content);
-}
+};
 
 
 function init() {
@@ -72,18 +72,17 @@ function init() {
                         card.classList.remove('hide');
                     }
 
-                })
+                });
 
-            }
-
+            };
             // add click event listener
-            filterButtons.forEach(button => button.addEventListener('click', filterCards))
+            filterButtons.forEach(button => button.addEventListener('click', filterCards));
 
         })
         .catch((error) => {
             console.error('Error:', error);
         });
-}
+};
 
 init();
 
