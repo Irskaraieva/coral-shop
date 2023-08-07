@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&family=Open+Sans:wght@400;600;700&family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/promo.css" />
+    <link rel="stylesheet" href="./styles/main-products.css" />
+    <link rel="stylesheet" href="./styles/hot-offers.css" />
+    <link rel="stylesheet" href="./styles/product-card.css" />
+    <link rel="stylesheet" href="./styles/best-sellers.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/brand-bunner.css" />
+    <link rel="stylesheet" href="./styles/icons-font.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/goodsList.js" defer></script>
+    <script src="./js/bestSellers.js" defer></script>
+
+    <title>CORAL</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <section class="header-head container">
+          <div class="search-content" id="searchContent">
+            <img
+              src="./images/icons/search1.png"
+              alt="search-icon"
+              id="searchIcon"
+            />
+            <input
+              class="input"
+              placeholder=""
+              type="text"
+              name="input"
+              id="input"
+            />
+            <button class="search-btn" id="searchBtn">search</button>
+          </div>
+          <section>
+            <a href="#!" class="logo">
+              <img
+                class="diamonds"
+                src="./images/icons/diamonds.png"
+                alt="diamonds"
+              />
+              <span class="logo-text">CORAL</span>
+              <img
+                class="diamonds"
+                src="./images/icons/diamonds.png"
+                alt="diamonds"
+              />
+            </a>
+          </section>
+          <section class="header-head-right">
+            <button class="account icon-avatar">
+              <span class="account-text">Account</span>
+            </button>
+            <button class="cart-shopping icon-cart">
+              <span class="shopping-text">Shopping</span>
+            </button>
+          </section>
+        </section>
+        <nav id="nav" class="nav container">
+          <button class="nav-burger" id="burgerOpen">&lsaquo;</button>
+          <ul class="nav-list" id="navList">
+            <li><a href="#!">Jewerly & Accessories</a></li>
+            <li><a href="#!">Clothing & Shoes</a></li>
+            <li><a href="#!">Wedding & Party</a></li>
+            <li><a href="#!">Art & Collectibles</a></li>
+            <li><a href="#!">Craft Supplies & Tiils</a></li>
+          </ul>
+        </nav>
+      </header>
+       <main class="main">
+       <section class="promo">
+          <div class="promo-content container">
+            <article class="promo-article">
+              <h2>Collections</h2>
+              <p>
+                Here you can see and buy various collections from different
+                brands. dfghdfh
+              </p>
+              <button class="shop-now-btn icon-cart">
+                <span class="btn-text"> Shop Now</span>
+              </button>
+            </article>
+            <figure class="img-product">
+              <img src="./images/icons/image-product.svg" alt="product" />
+            </figure>
+          </div>
+          <img
+            src="./images/icons/flower-left.png"
+            alt="decor-left"
+            class="decor-left"
+          />
+          <img
+            src="./images/icons/decor-right.svg"
+            alt="decor-right"
+            class="decor-right"
+          />
+        </section>
+        <section class="brands container">
+          <figure><img src="./images/icons/brand-1.png" /></figure>
+          <figure><img src="./images/icons/brand-2.png" /></figure>
+          <figure><img src="./images/icons/brand-3.png" /></figure>
+          <figure><img src="./images/icons/brand-4.png" /></figure>
+          <figure><img src="./images/icons/brand-5.png" /></figure>
+        </section>
+        <section class="hot-offers">
+          <div class="hot-offers-content container">
+            <div class="hot-offers-text grid-0">
+              <h2>Explore new and popular stiles</h2>
+            </div>
+            <div class="card grid-1">
+              <img src="./images/content-images/item-category-4.svg" />
+              <div class="label">
+                <h6>Hot</h6>
+              </div>
+              <section class="card-footer">
+                <h6>Manto</h6>
+                <span>86 Products</span>
+              </section>
+            </div>
+            <div class="card grid-2">
+              <img src="./images/content-images/item-category-2.svg" />
+              <div class="label">
+                <h6>Hot</h6>
+              </div>
+              <section class="card-footer">
+                <h6>Shirt</h6>
+                <span>320 Products</span>
+              </section>
+            </div>
+            <div class="card grid-3">
+              <img src="./images/content-images/item-category-3.svg" />
+              <div class="label">
+                <h6>Hot</h6>
+              </div>
+              <section class="card-footer">
+                <h6>Pants</h6>
+                <span>200 Products</span>
+              </section>
+            </div>
+            <div class="card grid-4">
+              <img src="./images/content-images/item-category-1.svg" />
+              <div class="label">
+                <h6>Hot</h6>
+              </div>
+              <section class="card-footer">
+                <h6>Coat</h6>
+                <span>26 Products</span>
+              </section>
+            </div>
+            <div class="card grid-5">
+              <img src="./images/content-images/item-category-5.svg" />
+              <div class="label">
+                <h6>Hot</h6>
+              </div>
+              <section class="card-footer">
+                <h6>Jacket</h6>
+                <span>102 Products</span>
+              </section>
+            </div>
+          </div>
+        </section>
+        <section class="main-products">
+          <div class="container">
+            <div class="main-products-header">
+              <h2>the best products are waiting for you</h2>
+            </div>
+            <div class="main-nav-filter">
+              <nav class="nav-products">
+                <ul>
+                  <li>
+                    <button class="active" data-name="all products">all products</button>
+                  </li>
+                  <li><button data-name="t-shirts">t-shirts</button></li>
+                  <li><button data-name="hoodies">hoodies</button></li>
+                  <li><button data-name="jacket">jacket</button></li>
+                  <li><button data-name="dress">dress</button></li>
+                </ul>
+              </nav>
+              <button class="filter icon-filter">
+                <span class="filter-text">Filter</span>
+              </button>
+            </div>
+            <section class="goods" id="projects">
+            </section>
+          </div>
+          <section class="brand-banner">
+            <img
+              src="./images/content-images/bunner-black.svg"
+              alt="brand-banner"
+              class="main-banner"
+            />
+            <img
+              src="./images/content-images/zara-big.png"
+              alt="zara-big"
+              class="zara-big"
+            />
+            <div class="brand-bunner-content">
+              <article class="brand-container">
+                <figure class="zara-small">
+                  <img src="./images/content-images/zara-name.png" />
+                </figure>
+                <p>
+                  Lustrous yet understated. The new evening wear collection
+                  exclusively offered at the reopened Giorgio Armani boutique in
+                  Los Angeles.
+                </p>
+                <a href="!#" class="brand-banner-btn">See Collection</a>
+              </article>
+            </div>
+          </section>
+          <div class="container">
+            <div class="main-products-header">
+              <h2>best Sellers</h2>
+            </div>
+            <div class="main-nav-filter">
+              <nav class="nav-products-best">
+                <ul>
+                  <li>
+                    <button class="active" data-name="all products">all products</button>
+                  </li>
+                  <li><button data-name="t-shirts">t-shirts</button></li>
+                  <li><button data-name="hoodies">hoodies</button></li>
+                  <li><button data-name="jacket">jacket</button></li>
+                </ul>
+              </nav>
+              <button class="show-all-btn">
+                <span class="show-all">Show All</span>
+              </button>
+            </div>
+            <section class="best-sellers swiper">
+              <section class="swiper-wrapper" id="bestSellers"></section>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </section>
+          </div>
+          <section class="follow">
+            <div class="container">
+              <div class="follow-title">
+                <h2>Follow products and discounts on Instagram</h2>
+              </div>
+              <div class="follow-images">
+                <figure class="follow-img">
+                  <img
+                    src="./images/content-images/product-9.svg"
+                    alt="product-9"
+                  />
+                  <div class="overlay">
+                    <a href="!#" class="icon" title="instagram">
+                      <img
+                        src="./images/content-images/instagram-follow.png"
+                        alt="instagram"
+                      />
+                    </a>
+                  </div>
+                </figure>
+                <figure class="follow-img">
+                  <img
+                    src="./images/content-images/product-10.svg"
+                    alt="product-10"
+                  />
+                  <div class="overlay">
+                    <a href="!#" class="icon" title="instagram">
+                      <img
+                        src="./images/content-images/instagram-follow.png"
+                        alt="instagram"
+                      />
+                    </a>
+                  </div>
+                </figure>
+                <figure class="follow-img">
+                  <img
+                    src="./images/content-images/product-11.svg"
+                    alt="product-11"
+                  />
+                  <div class="overlay">
+                    <a href="!#" class="icon" title="instagram">
+                      <img
+                        src="./images/content-images/instagram-follow.png"
+                        alt="instagram"
+                      />
+                    </a>
+                  </div>
+                </figure>
+                <figure class="follow-img">
+                  <img
+                    src="./images/content-images/product-12.svg"
+                    alt="product-12"
+                  />
+                  <div class="overlay">
+                    <a href="!#" class="icon" title="instagram">
+                      <img
+                        src="./images/content-images/instagram-follow.png"
+                        alt="instagram"
+                      />
+                    </a>
+                  </div>
+                </figure>
+                <figure class="follow-img">
+                  <img
+                    src="./images/content-images/product-13.svg"
+                    alt="product-13"
+                  />
+                  <div class="overlay">
+                    <a href="!#" class="icon" title="instagram">
+                      <img
+                        src="./images/content-images/instagram-follow.png"
+                        alt="instagram"
+                      />
+                    </a>
+                  </div>
+                </figure>
+                <figure class="follow-img">
+                  <img
+                    src="./images/content-images/product-14.svg"
+                    alt="product-14"
+                  />
+                  <div class="overlay">
+                    <a href="!#" class="icon" title="instagram">
+                      <img
+                        src="./images/content-images/instagram-follow.png"
+                        alt="instagram"
+                      />
+                    </a>
+                  </div>
+                </figure>
+              </div>
+              <div class="follow-subscribe">
+                <h2>Or subscribe to the newsletter</h2>
+                <form>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email Adress..."
+                  />
+                  <button type="submit" class="form-btn">Submit</button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-head">
+          <div class="container footer-head-content">
+            <div class="footer-info">
+              <a href="#!" class="logo">
+                <img
+                  class="diamonds"
+                  src="./images/icons/diamonds.png"
+                  alt="diamonds"
+                />
+                <span class="logo-text">CORAL</span>
+                <img
+                  class="diamonds"
+                  src="./images/icons/diamonds.png"
+                  alt="diamonds"
+                />
+              </a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A fuga
+                impedit recusandae explicabo provident.
+              </p>
+              <section class="socials">
+                <a target="_blank" href="!#" class="icon-facebook"> </a>
+                <a target="_blank" href="!#" class="icon-twitter"> </a>
+                <a target="_blank" href="!#" class="icon-linkedin"> </a>
+                <a target="_blank" href="!#" class="icon-instagram"> </a>
+              </section>
+            </div>
+            <div class="footer-catalog">
+              <div class="catalog-content">
+                <h5>catalog</h5>
+                <button class="footer-arrow" id="catalogArrow">&lsaquo;</button>
+              </div>
+              <ul id="catalogList" class="catalogList">
+                <li>Necklaces</li>
+                <li>hoodies</li>
+                <li>Jewelry Box</li>
+                <li>T-shirt</li>
+                <li>Jacket</li>
+              </ul>
+            </div>
+            <div class="footer-about">
+              <div class="about-content">
+                <h5>about us</h5>
+                <button class="footer-arrow" id="aboutArrow">&lsaquo;</button>
+              </div>
+              <ul id="aboutList" class="aboutList">
+                <li>our producers</li>
+                <li>Terms & conditions</li>
+                <li>sitemap</li>
+                <li>faq</li>
+                <li>about us</li>
+              </ul>
+            </div>
+            <div class="footer-services">
+              <div class="customer-content">
+                <h5>Customer services</h5>
+                <button class="footer-arrow" id="customerArrow">
+                  &lsaquo;
+                </button>
+              </div>
+              <ul id="customerList" class="contactList">
+                <li>contact us</li>
+                <li>Track your order</li>
+                <li>product care & repair</li>
+                <li>book an appointment</li>
+                <li>Shipping & returns</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="foter-bottom-content">
+              <span>&#169; 2023 Coral, Inc.</span>
+              <div class="footer-payments">
+                <img src="./images/icons/mastercard.svg" alt="mastercard" />
+                <img src="./images/icons/payPal.svg" alt="payPal" />
+                <img src="./images/icons/solo.png" alt="solo" />
+                <img src="./images/icons/visa.svg" alt="visa" />
+                <img src="./images/icons/westernUnion.png" alt="westernUnion" />
+              </div>
+              <button class="scroll-to-top" id="scrollToTop">
+                <span>Scroll to top</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

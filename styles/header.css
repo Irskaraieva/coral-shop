@@ -1,0 +1,287 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
+    font-family: 'Roboto', sans-serif;
+    /* position: sticky;
+    top: 0;
+    z-index: 20; */
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1350px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid rgb(235, 232, 232);
+}
+
+.search-content {
+    width: 240px;
+    height: 30px;
+    position: relative;
+    border-radius: 2px;
+}
+
+.search-content.clicked::after {
+    content: "";
+    display: block;
+    background-color: rgb(212, 211, 211);    
+    opacity: .8;
+    height: 1px;
+    position: absolute;
+    bottom: -3px;
+    left: 25px;
+    width: 60%;
+    animation: easeAppear .3s ease;
+}
+
+.input {
+    width: 75%;
+    height: 100%;
+    position: absolute;
+    border: none;
+    padding-left: 30px;
+    padding-right: 15px;
+    transition: .3s;
+}
+
+input:-webkit-autofill {
+    box-shadow: inset 0 0 20px 20px rgb(245, 245, 245);
+}
+
+.input:focus {
+    outline: none;
+    background-color: initial;
+}
+
+.search-btn {
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    text-transform: capitalize;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 0px 2px 2px 0px;
+    color: rgb(12, 12, 12);
+    transition: .2s ease;
+}
+
+.search-btn:hover {
+    color: rgb(56, 56, 56);
+    opacity: .8;
+}
+
+.search-content img {
+    position: absolute;
+    top: 20%;
+    left: 5px;
+    z-index: 1;
+    height: 15px;
+    width: 15px;
+    transition: .3s;
+}
+
+.search-content img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 190px;
+    height: 35px;
+}
+
+.diamonds {
+    height: 15px;
+    width: 31px;
+}
+
+.logo-text {
+    font-weight: 300;
+    font-size: 2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+.header-head-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.account,
+.cart-shopping {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 110px;
+    padding: 5px;
+    height: 40px;
+    position: relative;
+    color: rgb(37, 25, 25);
+    transition: .3s;
+}
+
+.cart-shopping {
+    min-width: 117px;
+}
+
+.account-text,
+.shopping-text {
+    font-size: 1.2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.account:hover,
+.cart-shopping:hover {
+    opacity: .8;
+    color: white;
+    background-color: rgb(59, 59, 59);
+}
+
+.avatar {
+    height: 24px;
+    width: 24px;
+}
+
+.cart-header {
+    height: 24px;
+    width: auto;
+    line-height: 24px;
+    font-size: 24px;
+}
+
+.nav {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.nav-burger {
+    transform: rotate(-90deg);
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    display: none;
+    transition: .3s ease;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+    transition: .3s ease;
+}
+
+.nav-list li {
+    font-size: 1.1rem;
+    opacity: 1;
+    transition: .3s;
+}
+
+.nav-list li:hover {
+    opacity: .7;
+}
+
+
+@media (max-width: 900px) {
+
+    .nav-list {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 730px) {
+
+    .search-content {
+        position: absolute;
+        bottom: -25px;
+        left: 10px;
+        height: 20px;
+        z-index: 5;       
+    }
+
+    .search-content img {
+        height: 12px;
+        width: 12px;        
+    }
+
+    .header-head {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .logo {
+        width: 170px;
+        height: 32px;
+    }
+
+    .diamonds {
+        height: 14px;
+        width: 29px;
+    }
+
+    .logo-text {
+        font-size: 1.6rem;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .account,
+    .cart-shopping {
+        min-width: 100px;
+    }
+
+    .account-text,
+    .shopping-text {
+        font-size: 1rem;
+    }
+
+    .nav-burger {
+        display: block;
+    }
+    
+    .nav {
+        padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .nav-list {
+        padding-top: 25px;
+        display: none;
+        overflow: hidden;
+        transition: 0.9s ease;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .header-head {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-head-right {
+        width: 80%;
+    }
+}

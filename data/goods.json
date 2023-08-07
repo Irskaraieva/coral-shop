@@ -1,0 +1,132 @@
+    [
+        {
+            "id": 1,
+            "title": "Adicolor Classics Joggers",
+            "category": "Jacket",
+            "price": 155.00,
+            "promoPrice": 364.00,
+            "image": "./images/content-images/product-1.svg",
+            "status": "sale",
+            "bestsellers": true
+        },
+        {
+            "id": 2,
+            "title": "Nike Sportswear Futura Luxe",
+            "category": "Glasses",
+            "price": 160.00,
+            "promoPrice": "",
+            "image": "./images/content-images/product-2.svg",
+            "status": "hot",
+            "bestsellers": false
+        },
+        {
+            "id": 4,
+            "title": "Nike Sportswear Futura Luxe",
+            "category": "Bag",
+            "price": 130.00,
+            "promoPrice": "",
+            "image": "./images/content-images/product-4.svg",
+            "status": "hot",
+            "bestsellers": true
+        },
+        {
+            "id": 5,
+            "title": "Geometric Print Scarf",
+            "category": "Scarf",
+            "price": 53.00,
+            "promoPrice": "",
+            "image": "./images/content-images/product-5.svg",
+            "status": "hot",
+            "bestsellers": true
+        },
+        {
+            "id": 6,
+            "title": "Nike Air Zoom Pegasus",
+            "category": "Shoe",
+            "price": 220.00,
+            "promoPrice": 198.00,
+            "image": "./images/content-images/product-6.svg",
+            "status": "sale",
+            "bestsellers": false
+        },
+        {
+            "id": 7,
+            "title": "Basic Dress Green",
+            "category": "Dress",
+            "price": 236.00,
+            "promoPrice": "",
+            "image": "./images/content-images/product-7.svg",
+            "status": "hot",
+            "bestsellers": true
+        },
+        {
+            "id": 8,
+            "title": "Nike Repel Miler",
+            "category": "Jacket",
+            "price": 120.50,
+            "promoPrice": "",
+            "image": "./images/content-images/product-8.svg",
+            "status": "hot",
+            "bestsellers": true
+        },
+        {
+            "id": 15,
+            "title": "Adicolor Classic Joggers",
+            "category": "Dress",
+            "price": 63.85,
+            "promoPrice": "",
+            "image": "./images/content-images/product-15.svg",
+            "status": "hot",
+            "bestsellers": false
+        },
+        {
+            "id": 16,
+            "title": "Classic T-shirts",
+            "category": "T-shirts",
+            "price": 59.90,
+            "promoPrice": "",
+            "image": "./images/content-images/product-16.jpg",
+            "status": "",
+            "bestsellers": true
+        },
+        {
+            "id": 17,
+            "title": "Blue Sky Tenis",
+            "category": "T-shirts",
+            "price": 110.00,
+            "promoPrice": "",
+            "image": "./images/content-images/product-17.jpg",
+            "status": "",
+            "bestsellers": false
+        },
+        {
+            "id": 18,
+            "title": "Adicolor Classic Joggers",
+            "category": "Hoodies",
+            "price": 63.85,
+            "promoPrice": "",
+            "image": "./images/content-images/product-18.jpg",
+            "status": "",
+            "bestsellers": false
+        },
+        {
+            "id": 19,
+            "title": "Adicolor Classic Joggers",
+            "category": "Hoodies",
+            "price": 63.85,
+            "promoPrice": "",
+            "image": "./images/content-images/product-19.jpg",
+            "status": "",
+            "bestsellers": true
+        },
+        {
+            "id": 20,
+            "title": "EveryDay Style",
+            "category": "Hoodies",
+            "price": 263.85,
+            "promoPrice": "",
+            "image": "./images/content-images/product-20.jpg",
+            "status": "",
+            "bestsellers": false
+        }
+    ]

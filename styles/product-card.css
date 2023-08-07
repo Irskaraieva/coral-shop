@@ -1,0 +1,135 @@
+.goods {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    padding-bottom: calc(5px + (80 - 5) * ((100vw - 320px) / 1520));
+}
+
+div .swiper-button-prev::after,
+div .swiper-button-next::after {
+    color: rgba(30, 40, 50, 0.25);
+    font-size: 32px;
+}
+
+.goods .product-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    position: relative;
+    margin-bottom: calc(12px + (20 - 12) * ((100vw - 320px) / 1520));
+    transition: .3s;
+    padding: 5px;
+}
+
+.product-card img {
+    height: 80%;
+}
+
+.product-card:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 36px -19px rgba(0, 0, 0, 0.84);
+    -moz-box-shadow: 0px 0px 36px -19px rgba(0, 0, 0, 0.84);
+    box-shadow: 0px 0px 36px -19px rgba(0, 0, 0, 0.84);
+}
+
+.product-card-label {
+    position: absolute;
+    top: 5%;
+    width: 22%;
+    flex-shrink: 0;
+    transition: .3s;
+}
+
+.product-card-label h6 {
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.hot {
+    background-color: #FF6F61;
+}
+
+.product-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 0px 8px 0px;
+    flex: 1 1 auto;
+}
+
+.product-name h5 {
+    font-family: 'Open Sans';
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / 1520));
+    line-height: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-end;
+}
+
+.product-footer h6 {
+    color: rgb(85, 84, 84);
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / 1520));
+}
+
+.total span:first-child {
+    color: rgb(85, 84, 84);
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / 1520));
+}
+
+.total span:not(:first-child) {
+    margin-left: 12px;
+    font-size: calc(13px + (16 - 13) * ((100vw - 320px) / 1520));
+    color: #FF6F61;
+    font-weight: 600;
+}
+
+.main-price {
+    font-weight: 600;
+}
+
+@media (max-width: 972px) {
+
+    .goods .product-card {
+        max-width: 30%;
+    }
+
+    .goods {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 529px) {
+    .goods .product-card {
+        max-width: 48%;
+    }
+
+    .product-card-label h6 {
+        color: white;
+        text-transform: capitalize;
+        text-align: center;
+        font-family: 'Open Sans';
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+      
+    }
+
+}

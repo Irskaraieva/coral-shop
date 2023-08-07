@@ -1,0 +1,233 @@
+.main-products {
+    padding-bottom: 30px;
+}
+
+.main-products-header {
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    padding-top: calc(32px + (80 - 32) * ((100vw - 320px) / 1300));
+}
+
+.main-products-header h2 {
+    font-family: 'Roboto';
+    font-size: calc(24px + (70 - 24) * ((100vw - 320px) / 1720));
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.main-nav-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-products {
+    padding-top: calc(15px + (35 - 15) * ((100vw - 320px) / 1300));
+    padding-bottom: calc(15px + (35 - 15) * ((100vw - 320px) / 1300));
+}
+
+.nav-products ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: calc(5px + (10 - 5) * ((100vw - 320px) / 1300));
+}
+
+.nav-products ul>li {
+    padding: 0 8px;
+    margin-right: calc(2px + (15 - 2) * ((100vw - 320px) / 1300));
+}
+
+.nav-products button {
+    text-transform: capitalize;
+    font-family: 'Open Sans';
+    height: calc(24px + (32 - 24) * ((100vw - 320px) / 1300));
+    color: rgba(0, 0, 0, 0.50);
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / 1300));
+    transition: .3s;
+    font-weight: bold;
+}
+
+.nav-products button:hover {
+    color: rgb(83, 82, 82);
+}
+
+.filter {
+    width: calc(74px + (92 - 74) * ((100vw - 320px) / 1300));
+    height: calc(24px + (32 - 24) * ((100vw - 320px) / 1300));
+    background-color: #1E2832;
+    color: white;
+    display: flex;
+    padding: 5px 15px;
+    align-items: center;
+    gap: 4px;
+    transition: .3s;
+}
+
+.filter-text {
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / 1300));
+    font-weight: 400;
+}
+
+.filter:hover {
+    background-color: #4a4b4d;
+}
+
+.follow {
+    background-color: rgba(30, 40, 50, 0.05);
+    padding-top: calc(30px + (80 - 30) * ((100vw - 320px) / 1300));
+    padding-bottom: calc(30px + (80 - 30) * ((100vw - 320px) / 1300));
+}
+
+.follow .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.follow-title,
+.follow-subscribe {
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+
+}
+
+.follow-title h2,
+.follow-subscribe h2 {
+    font-family: 'Roboto';
+    font-size: calc(24px + (48 - 24) * ((100vw - 320px) / 1720));
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.follow-subscribe form {
+    margin-top: calc(34px + (70 - 34) * ((100vw - 320px) / 1420));
+    display: flex;
+}
+
+.follow-images {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.follow-img {
+    max-width: 200px;
+    position: relative;
+    height: auto;
+}
+
+.follow-img img {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.follow-img:hover .overlay {
+    opacity: 1;
+}
+
+form {
+    max-width: 700px;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-control {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 600;
+    align-items: center;
+    width: 70%;
+    padding-left: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.form-control:focus {
+    outline: none;
+}
+
+.form-btn {
+    height: 24px;
+    font-family: 'Open Sans';
+    line-height: 24px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 90px;
+    border-bottom: 1px solid gray;
+    padding: 0 5px 5px 5px;
+    transition: .4s;
+}
+
+.form-btn:hover {
+    background-color: rgb(7, 7, 7);
+    color: white;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+}
+
+
+
+@media (max-width: 1352px) {
+    .main-products-header h2 {
+        font-size: calc(20px + (36 - 20) * ((100vw - 320px) / 1300));
+    }
+
+    .follow-img {
+        max-width: 140px;
+    }
+
+}
+
+@media (max-width: 1112px) {
+
+    .follow-img {
+        max-width: 100px;
+    }
+
+}
+
+@media (max-width: 615px) {
+    .follow .container {
+
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    form {
+        width: 100%;
+        justify-content: space-between;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-control {
+        width: 100%;
+        padding-left: 0;
+    }
+
+}

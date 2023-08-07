@@ -1,0 +1,246 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-head-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.footer-head {
+    position: relative;
+}
+
+.footer-info {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.footer-info p {
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(30, 40, 50, 0.75);
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.socials {
+    display: flex;
+    width: 208px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials a {
+    display: block;
+    width: auto;
+    height: 25px;
+    transition: .3s;
+    font-size: 1.5rem;
+}
+
+.icon-instagram:before {
+    font-size: 1.8rem;
+}
+
+.socials a:hover {
+    opacity: .8;
+}
+
+.footer-bottom {
+    height: 52px;
+    background-color: #1E2832;
+    position: relative;
+}
+
+.footer-catalog,
+.footer-about,
+.footer-services {
+    max-width: 25%;
+}
+
+.catalog-content,
+.about-content,
+.customer-content {
+    display: flex;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.footer h5 {
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    line-height: 1.4rem;
+    letter-spacing: .01rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer h5:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.catalogList,
+.aboutList,
+.contactList {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 1rem;
+    letter-spacing: .01rem;
+    line-height: 1.6rem;
+    gap: 12px;
+    color: #1E2832;
+    text-transform: capitalize;
+}
+
+.footer li:hover {
+    cursor: pointer;
+    color: black;
+}
+
+
+.foter-bottom-content {
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    line-height: 52px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scroll-to-top {
+    position: relative;
+    color: white;
+    height: 35px;
+    font-size: 1rem;
+    width: 100px;
+}
+
+.scroll-to-top::after {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    content: '\2191';
+    font-weight: 600;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.scroll-to-top:hover::after {
+    bottom: 15px;
+}
+
+.footer-payments {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 285px;
+}
+
+.footer-payments img {
+    height: 30px;
+    width: auto;
+}
+
+.footer-arrow {
+    transform: rotate(-90deg);
+    font-size: 1.5rem;
+    display: none;
+    transition: .3s ease;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+@media (max-width: 1000px) {
+
+    .footer {
+        padding-top: 15px;
+    }
+
+    .footer-catalog,
+    .footer-about,
+    .footer-services {
+        max-width: 33%;
+        min-width: 30%;
+        z-index: 5;
+    }
+
+    .footer-info  {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 10px;        
+        align-items: center;
+    }
+
+    .footer-info p {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 650px) {
+
+    .footer-head-content {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+
+    .footer-info {
+        bottom: 60px;
+    }
+
+    .footer-info .logo {
+        width: fit-content;
+    } 
+
+    .catalogList,
+    .aboutList,
+    .contactList {
+        display: none;
+        padding-bottom: 15px;
+    }
+
+    .footer-catalog,
+    .footer-about,
+    .footer-services {
+        max-width: 100%;
+        min-width: 220px;
+    }
+
+    .footer-arrow {
+        display: block;
+    }
+
+    .footer-payments img {
+        height: 20px;
+    }
+
+    .footer-payments {
+        width: 245px;
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,114 @@
+.main {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+/* section brands*/
+
+.brands {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.brands figure {
+    flex: 0 0 200px;
+    height: auto;
+}
+
+.nav-products .active {
+    color: black;
+}
+
+
+.product-card.hide,
+.swiper-slide.hide {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(90deg);
+    transition: .3s ease;
+}
+
+.open {
+    display: flex;
+    animation: easeOpening .3s ease;
+}
+
+.appear {
+    display: block;
+    animation: easeAppear .3s ease;
+}
+
+.show-me {
+    opacity: 1;
+    pointer-events: auto;
+    animation: apearOpasity .3s ease;
+}
+
+@keyframes easeOpening {
+    
+    from {height: 0%;
+        opacity: 0;}
+    to {
+        height: fit-content;
+        opacity: 1;
+    }
+}
+
+@keyframes easeAppear {
+    
+    from {
+        width: 0;
+        }
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes apearOpasity {
+    
+    from {
+        opacity: 0;
+        pointer-events: none;
+        }
+    to {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+
+.brands {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: space-around;
+}
+
+.brands figure {
+    flex: 0 0 140px; 
+}
+}
+
+@media (max-width: 800px) {
+
+    .brands {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .brands figure {
+        flex: 0 0 100px; 
+    }
+}
+@media (max-width: 600px) {
+    
+    .brands figure {
+        flex: 0 0 80px; 
+    }
+}
