@@ -89,8 +89,8 @@
           </ul>
         </nav>
       </header>
-       <main class="main">
-       <section class="promo">
+      <main class="main">
+        <section class="promo">
           <div class="promo-content container">
             <article class="promo-article">
               <h2>Collections</h2>
@@ -99,7 +99,7 @@
                 brands. dfghdfh
               </p>
               <button class="shop-now-btn icon-cart">
-                <span class="btn-text"> Shop Now</span>
+                <span class="btn-text">Shop Now</span>
               </button>
             </article>
             <figure class="img-product">
@@ -190,7 +190,9 @@
               <nav class="nav-products">
                 <ul>
                   <li>
-                    <button class="active" data-name="all products">all products</button>
+                    <button class="active" data-name="all products">
+                      all products
+                    </button>
                   </li>
                   <li><button data-name="t-shirts">t-shirts</button></li>
                   <li><button data-name="hoodies">hoodies</button></li>
@@ -198,11 +200,50 @@
                   <li><button data-name="dress">dress</button></li>
                 </ul>
               </nav>
-              <button class="filter icon-filter">
+              <div class="slidecontainer" id="slidecontainer">
+                <header class="price-header">
+                  <h5>Price, $:</h5>
+                </header>
+                <section class="price-input">
+                  <div class="field">
+                    <span class="field-min">min</span>
+                    <input type="number" class="input-min" value="100" />
+                  </div>
+                  <span>-</span>
+                  <div class="field">
+                    <span class="field-max">max</span>
+                    <input type="number" class="input-max" value="800" />
+                  </div>
+                </section>
+                <div class="range-section">
+                  <div class="progress-line"></div>
+                </div>
+                <div class="points">
+                  <input
+                    type="range"
+                    min="0"
+                    max="1000"
+                    step="10"
+                    value="100"
+                    class="point-min"
+                  />
+                  <input
+                    type="range"
+                    min="0"
+                    max="1000"
+                    step="10"
+                    value="800"
+                    class="point-max"
+                  />
+                </div>
+                <button class="apply" id="apply">Apply</button>
+              </div>
+              <button class="filter icon-filter" id="filter">
                 <span class="filter-text">Filter</span>
               </button>
             </div>
             <section class="goods" id="projects">
+              <h3 class="empty-text">there is nothing here...</h3>
             </section>
           </div>
           <section class="brand-banner">
@@ -238,7 +279,9 @@
               <nav class="nav-products-best">
                 <ul>
                   <li>
-                    <button class="active" data-name="all products">all products</button>
+                    <button class="active" data-name="all products">
+                      all products
+                    </button>
                   </li>
                   <li><button data-name="t-shirts">t-shirts</button></li>
                   <li><button data-name="hoodies">hoodies</button></li>
@@ -251,8 +294,8 @@
             </div>
             <section class="best-sellers swiper">
               <section class="swiper-wrapper" id="bestSellers"></section>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev left-swiper-arrow"></div>
+              <div class="swiper-button-next right-swiper-arrow"></div>
             </section>
           </div>
           <section class="follow">

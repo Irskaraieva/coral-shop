@@ -22,6 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .nav-products {
@@ -53,6 +54,120 @@
 
 .nav-products button:hover {
     color: rgb(83, 82, 82);
+}
+
+/* filter by price  */
+
+.slidecontainer {
+    background-color: #eaeaec;
+    padding: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    width: 300px;
+    border-radius: 2px;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    z-index: 5;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    animation: apearOpasity .3s ease;
+}
+
+.price-header h5 {
+    font-weight: 600;
+}
+
+.field {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: .9rem;
+}
+
+.price-input {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.input-min,
+.input-max {
+    border: 1px solid rgb(223, 221, 221);
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    font-size: .9rem;
+    border-radius: 2px;
+    outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.range-section {
+    height: 4px;
+    background-color: #d6d7d8;
+    border-radius: 8px;
+    position: relative;
+}
+
+.progress-line {
+    position: absolute;
+    background-color: rgb(73, 72, 77);
+    height: 4px;
+    border-radius: 8px;
+    left: 11%;
+    right: 21%;
+}
+
+.points {
+    position: relative;
+}
+
+.points input {
+    position: absolute;
+    top: -14px;
+    height: 8px;
+    width: 100%;
+    -webkit-appearance: none;
+    background: none;
+    pointer-events: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #4a4b4d;
+    -webkit-appearance: none;
+    pointer-events: auto;
+}
+
+input[type='range']::-moz-range-thumb {
+    border: none;
+    background: #4a4b4d;
+    -webkit-appearance: none;
+    pointer-events: auto;
+}
+
+.apply {
+    width: 46%;
+    margin: 8px auto;
+    background-color: #0a0a0a;
+    color: white;
+    font-size: .9rem;
+    line-height: 1.8rem;
+    transition: .3s;
 }
 
 .filter {
@@ -189,6 +304,13 @@ form {
 
 
 
+@media (hover: hover) {
+
+    .apply:hover {
+        background-color: #4a4b4d;
+    }
+}
+
 @media (max-width: 1352px) {
     .main-products-header h2 {
         font-size: calc(20px + (36 - 20) * ((100vw - 320px) / 1300));
@@ -209,8 +331,8 @@ form {
 }
 
 @media (max-width: 615px) {
-    .follow .container {
 
+    .follow .container {
         gap: 30px;
     }
 }

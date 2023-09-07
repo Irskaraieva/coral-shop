@@ -11,6 +11,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .decor-left {
@@ -39,6 +40,8 @@
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
     padding-top: 80px;
+    transform: translateX(-100%);
+    animation: slideText .5s forwards;
 }
 
 .promo-article h2 {
@@ -82,6 +85,14 @@
 
 .img-product {
     flex: 0 0 35%;
+    transform: translateX(110%);
+    animation: slideText .5s forwards;
+}
+
+@keyframes slideText {
+    to {
+        transform: translateX(0%);
+    }
 }
 
 @media (max-width: 1200px) {

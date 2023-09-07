@@ -79,10 +79,10 @@ input:-webkit-autofill {
     transition: .2s ease;
 }
 
-.search-btn:hover {
+/* .search-btn:hover {
     color: rgb(56, 56, 56);
     opacity: .8;
-}
+} */
 
 .search-content img {
     position: absolute;
@@ -203,6 +203,12 @@ input:-webkit-autofill {
     opacity: .7;
 }
 
+@media (hover: hover) {
+    .search-btn:hover {
+        color: rgb(56, 56, 56);
+        opacity: .8;
+    }
+}
 
 @media (max-width: 900px) {
 

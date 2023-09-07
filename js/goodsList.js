@@ -1,20 +1,28 @@
 // goods.js
+
+const slidecontainer = document.getElementById('slidecontainer');
+const emptyText = document.querySelector('.empty-text');
+
 function createContent(godsData) {
 
     const color = godsData.status == 'hot' ? "background-color: #FF6F61;" : "background-color: #080808;";
-    const price = godsData.price.toFixed(2);
     const truncatedCategory = godsData.title.length > 29
         ? `${godsData.title.slice(0, 29)}...`
         : godsData.title;
+
+    const price = godsData.price.toFixed(2);
     const newPrice = Number(godsData.promoPrice).toFixed(2);
-    const textDecoration = godsData.promoPrice == "" ? "text-decoration: none;  font-weight: 600;" : "text-decoration: line-through;";
+    const andPrice = godsData.promoPrice !== "" ? newPrice : price;
+
     const span = godsData.promoPrice !== "" ? `<span>$${newPrice}</span>` : '';
+    const textDecoration = godsData.promoPrice == "" ? "text-decoration: none;  font-weight: 600;" : "text-decoration: line-through;";
     const dataName = godsData.category.toLowerCase();
+    const picture = godsData.image ? godsData.image : './images/content-images/imageNotFound.png';
 
 
     const prod = `
-        <figure class="product-card" data-name='${dataName}'>
-            <img src='${godsData.image}' />
+        <figure class="product-card" data-name='${dataName}' data-price='${andPrice}'>
+            <img src='${picture}' />
             <div class="product-card-label" style="${color}">
                 <h6>${godsData.status}</h6>
             </div>
@@ -64,17 +72,38 @@ function init() {
             const filterCards = (e) => {
                 document.querySelector('.active').classList.remove('active');
                 e.target.classList.add('active');
+                slidecontainer.style.display = 'none';
+
+                const minPrice = parseFloat(document.querySelector('.input-min').value);
+                const maxPrice = parseFloat(document.querySelector('.input-max').value);
+
 
                 filterableCards.forEach(card => {
+                    const cardPrice = parseFloat(card.dataset.price);
+                    const cardDataName = card.dataset.name;
                     card.classList.add('hide');
-                    if (card.dataset.name === e.target.dataset.name || e.target.dataset.name === 'all products') {
-                        card.classList.remove('hide');
+
+                    if (cardPrice >= minPrice && cardPrice <= maxPrice) {
+                        if ((cardDataName === e.target.dataset.name) || (e.target.dataset.name === 'all products')) {
+                            card.classList.remove('hide');
+                        }
                     }
+
                 });
+
+                const isEmptyList = document.querySelectorAll('.goods .product-card:not(.hide)');
+
+                if (isEmptyList.length === 0) {
+                    emptyText.style.display = 'block';
+                } else {
+                    emptyText.style.display = 'none';
+                }
             };
-            
+
             // add click event listener
             filterButtons.forEach(button => button.addEventListener('click', filterCards));
+
+
 
         })
         .catch((error) => {
@@ -83,4 +112,95 @@ function init() {
 };
 
 init();
+
+// filter by price
+
+const rangeInput = document.querySelectorAll('.points input');
+const parseInput = document.querySelectorAll('.price-input input');
+const progress = document.querySelector('.progress-line');
+
+
+const priceGap = 100;
+
+rangeInput.forEach(input => {
+    input.addEventListener('input', (e) => {
+        const minValue = parseInt(rangeInput[0].value);
+        const maxValue = parseInt(rangeInput[1].value);
+
+        if (maxValue - minValue < priceGap) {
+            if (e.target.className === 'point-min') {
+                rangeInput[0].value = maxValue - priceGap;
+            } else {
+                rangeInput[1].value = minValue + priceGap;
+            }
+        } else {
+            parseInput[0].value = minValue;
+            parseInput[1].value = maxValue;
+            progress.style.left = (minValue / rangeInput[0].max) * 100 + '%';
+            progress.style.right = 100 - (maxValue / rangeInput[1].max) * 100 + '%';
+        }
+    })
+});
+
+parseInput.forEach(input => {
+    input.addEventListener('input', (e) => {
+        const minValue = parseInt(parseInput[0].value);
+        const maxValue = parseInt(parseInput[1].value);
+
+        if ((maxValue - minValue >= priceGap) && maxValue <= 1000) {
+            if (e.target.className === 'input-min') {
+                rangeInput[0].value = minValue;
+                progress.style.left = (minValue / rangeInput[0].max) * 100 + '%';
+            } else {
+                rangeInput[1].value = maxValue;
+                progress.style.right = 100 - (maxValue / rangeInput[1].max) * 100 + '%';
+            }
+        } else {
+            parseInput[0].value = minValue;
+            parseInput[1].value = maxValue;
+        }
+    })
+});
+
+// show filter
+
+const filter = document.getElementById('filter');
+const apply = document.getElementById('apply');
+
+filter.addEventListener('click', () => {
+    slidecontainer.style.display = slidecontainer.style.display == 'none' ? 'flex' : 'none';
+});
+
+apply.addEventListener('click', () => {
+    slidecontainer.style.display = 'none';
+
+    const minPrice = parseFloat(document.querySelector('.input-min').value);
+    const maxPrice = parseFloat(document.querySelector('.input-max').value);
+
+    const visibleCard = document.querySelectorAll('.goods .product-card');
+    const filterButton = document.querySelector('.nav-products button.active');
+    const filterButtonName = filterButton.getAttribute('data-name');
+
+    visibleCard.forEach(card => {
+        const cardPrice = parseFloat(card.dataset.price);
+        const cardName = card.dataset.name;
+
+        if ((cardPrice >= minPrice && cardPrice <= maxPrice) && ((cardName === filterButtonName)|| (filterButtonName === 'all products'))) {
+            card.classList.remove('hide');
+        } else {
+            card.classList.add('hide');
+        }
+
+    });
+
+    const isEmptyList = document.querySelectorAll('.goods .product-card:not(.hide)');
+
+    if (isEmptyList.length === 0) {
+        emptyText.style.display = 'block';
+    }
+    else {
+        emptyText.style.display = 'none';
+    }
+});
+
 

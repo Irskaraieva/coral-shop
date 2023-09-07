@@ -48,12 +48,13 @@ function createContentTemplate(godsData) {
     const textDecoration = godsData.promoPrice == "" ? "text-decoration: none; font-weight: 600;" : "text-decoration: line-through;";
     const span = godsData.promoPrice !== "" ? `<span class="new-price">$${newPrice}</span>` : '';
     const dataName = godsData.category.toLowerCase();
+    const picture = godsData.image ? godsData.image : './images/content-images/imageNotFound.png';
 
 
     const product = `
     <div class="swiper-slide" data-name='${dataName}'>
         <figure class="product-card">
-            <img src='${godsData.image}' />
+            <img src='${picture}' />
             <div class="product-card-label" style="${color}">
                 <h6>${godsData.status}</h6>
             </div>

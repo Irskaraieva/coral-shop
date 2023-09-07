@@ -37,9 +37,6 @@
     font-weight: bold;
 }
 
-.nav-products-best button:hover {
-    color: rgb(83, 82, 82);
-}
 
 .nav-products-best .active {
     color: black;
@@ -60,6 +57,25 @@
 
 .show-all-btn:hover {
     background-color: #4a4b4d;
+}
+
+div .left-swiper-arrow,
+div .right-swiper-arrow {
+    background-color: rgb(238, 238, 250);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+div .left-swiper-arrow::after,
+div .right-swiper-arrow::after {
+    font-size: 24px;
+}
+
+@media (min-width: 768px) {
+    .nav-products-best button:hover {
+        color: rgb(83, 82, 82);
+    }
 }
 
 @media (max-width: 420px) {
