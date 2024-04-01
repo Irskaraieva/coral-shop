@@ -1,5 +1,5 @@
 // bestSellers.js
-new Swiper('.swiper', {
+const swiper = new Swiper('.swiper', {
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -110,8 +110,10 @@ function initBestSellers() {
 
                 filterableCards.forEach(card => {
                     card.classList.add('hide');
+                    swiper.update();
                     if (card.dataset.name === e.target.dataset.name || e.target.dataset.name === 'all products') {
                         card.classList.remove('hide');
+                        swiper.update();
                     }
                 });
 
