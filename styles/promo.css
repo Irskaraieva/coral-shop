@@ -41,7 +41,7 @@
     overflow: hidden;
     padding-top: 80px;
     transform: translateX(-100%);
-    animation: slideText .5s forwards;
+    animation: slideText .7s forwards;
 }
 
 .promo-article h2 {
@@ -85,8 +85,8 @@
 
 .img-product {
     flex: 0 0 35%;
-    transform: translateX(110%);
-    animation: slideText .5s forwards;
+    transform: translateX(100%);
+    animation: slideText .7s forwards;
 }
 
 @keyframes slideText {

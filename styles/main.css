@@ -4,7 +4,6 @@
 }
 
 /* section brands*/
-
 .brands {
     display: flex;
     justify-content: space-between;
@@ -22,7 +21,6 @@
 .nav-products .active {
     color: black;
 }
-
 
 .product-card.hide,
 .swiper-slide.hide {
@@ -50,6 +48,48 @@
     animation: apearOpasity .3s ease;
 }
 
+.block-appear {
+    animation: blockAppear .6s ease-in;
+}
+
+.block-left-appear {
+    animation: blockLeftAppear .8s ease-in;
+}
+
+.block-right-appear {
+    animation: blockRightAppear .8s ease-in;
+}
+
+@keyframes blockLeftAppear {
+    from {   
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes blockRightAppear {
+    from {   
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes blockAppear {
+    from {   
+        transform: translate(0px, 60px);
+    }
+
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
 @keyframes easeOpening {
     
     from {height: 0%;
@@ -60,8 +100,7 @@
     }
 }
 
-@keyframes easeAppear {
-    
+@keyframes easeAppear {    
     from {
         width: 0;
         }

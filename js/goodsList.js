@@ -21,20 +21,25 @@ function createContent(godsData) {
 
 
     const prod = `
-        <figure class="product-card" data-name='${dataName}' data-price='${andPrice}'>
-            <img src='${picture}' />
-            <div class="product-card-label" style="${color}">
-                <h6>${godsData.status}</h6>
+        <figure class="product-card card-rotate" data-name='${dataName}' data-price='${andPrice}'>
+            <div class="card-wrapper">
+                <div class="card-front">
+                    <img src='${picture}' />
+                    <div class="product-card-label" style="${color}">
+                        <h6>${godsData.status}</h6>
+                    </div>
+                    <figcaption class="product-caption">
+                        <div class="product-name"><h5>${truncatedCategory}</h5></div>
+                        <div class="product-footer">
+                            <h6>${godsData.category}</h6>
+                            <div class="total">
+                            <span style="${textDecoration}">$${price}</span>${span}
+                            </div> 
+                        </div>
+                    </figcaption>
+                </div>
+                <div class="card-back"></div>                
             </div>
-            <figcaption class="product-caption">
-            <div class="product-name"><h5>${truncatedCategory}</h5></div>
-            <div class="product-footer">
-                <h6>${godsData.category}</h6>
-                <div class="total">
-                <span style="${textDecoration}">$${price}</span>${span}
-                </div> 
-            </div>
-            </figcaption>
         </figure>
    `;
     return createFragmentTemplate(prod);
