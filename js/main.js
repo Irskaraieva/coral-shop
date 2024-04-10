@@ -96,15 +96,7 @@ document.addEventListener('scroll', () => {
     const blocks = document.querySelectorAll('.block');
     const blockLeft = document.querySelectorAll('.block-left');
     const blockRight = document.querySelectorAll('.block-right');
-    const card = document.querySelectorAll('.card-rotate');
 
-    card.forEach(card => {
-        const blockTop = card.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (blockTop < windowHeight) {
-            card.classList.add('block-appear');
-        }
-    });
     blocks.forEach(block => {
         const blockTop = block.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;

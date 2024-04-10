@@ -21,7 +21,7 @@ function createContent(godsData) {
 
 
     const prod = `
-        <figure class="product-card card-rotate" data-name='${dataName}' data-price='${andPrice}'>
+        <figure class="product-card block" data-name='${dataName}' data-price='${andPrice}'>
             <div class="card-wrapper">
                 <div class="card-front">
                     <img src='${picture}' />
